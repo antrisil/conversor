@@ -1,0 +1,24 @@
+{
+    "classes": [
+        {
+            "className": "UserActivityDetector",
+            "object": true,
+            "qualifiedClassName": "UserActivityDetector",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "userActivityDetected",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "useractivitydetector.h",
+    "outputRevision": 68
+}

@@ -23,6 +23,8 @@ qt_add_executable(appconversor_frequencias
     pcan.cpp
     timer.cpp
     timer.h
+    useractivitydetector.h
+    useractivitydetector.cpp
 )
 
 qt_add_qml_module(appconversor_frequencias

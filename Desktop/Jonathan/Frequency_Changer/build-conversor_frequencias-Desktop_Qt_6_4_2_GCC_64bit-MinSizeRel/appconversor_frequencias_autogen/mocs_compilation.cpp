@@ -2,3 +2,4 @@
 #include "EWIEGA46WW/moc_dbmanager.cpp"
 #include "EWIEGA46WW/moc_pcan.cpp"
 #include "EWIEGA46WW/moc_timer.cpp"
+#include "EWIEGA46WW/moc_useractivitydetector.cpp"

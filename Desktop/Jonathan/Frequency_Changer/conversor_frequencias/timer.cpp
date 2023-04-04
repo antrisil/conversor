@@ -1,5 +1,6 @@
 #include "timer.h"
 #include <unistd.h>
+#include <QProcess>
 
 timer::timer(QObject *parent) : QObject(parent)
 {

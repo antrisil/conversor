@@ -7,9 +7,10 @@ Item {
   property bool timeron: false
   signal exitClicked()
   property int a: 0
-  property int  segundos: 5
+  property int  segundos: 3
   property int  minutos: 0
   property int  horas: 0
+  signal sendTime(int horas, int minutos, int segundos)
 
   function updateTime(modelIndex, field, value) {
     var element = myListView.model.get(modelIndex);
@@ -21,6 +22,7 @@ Item {
       } else {
         textHours.text = value + ":"
       }
+      horas = value
       break
     case "minutes":
       element.minutes = value
@@ -29,6 +31,7 @@ Item {
       } else {
         textMinutes.text = value + ":"
       }
+      minutos = value
       break
     case "seconds":
       element.seconds = value
@@ -37,6 +40,7 @@ Item {
       } else {
         textSeconds.text = value
       }
+      segundos = value
       break
     }
     myListView.model.set(modelIndex, element)
@@ -44,6 +48,7 @@ Item {
 
   Rectangle {
     anchors.fill: parent
+
 
     Rectangle {
       id: timer2

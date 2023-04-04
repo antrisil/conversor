@@ -903,6 +903,12 @@
 			"Mu",
 			"EWIEGA46WW/moc_timer.cpp",
 			null
+		],
+		[
+			"/home/jonathan/Desktop/Jonathan/Frequency_Changer/conversor_frequencias/useractivitydetector.h",
+			"Mu",
+			"EWIEGA46WW/moc_useractivitydetector.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -1037,6 +1043,11 @@
 		],
 		[
 			"/home/jonathan/Desktop/Jonathan/Frequency_Changer/conversor_frequencias/timer.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/jonathan/Desktop/Jonathan/Frequency_Changer/conversor_frequencias/useractivitydetector.cpp",
 			"Mu",
 			null
 		]

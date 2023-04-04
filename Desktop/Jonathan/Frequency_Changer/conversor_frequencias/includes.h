@@ -37,4 +37,5 @@
 #include <QScreen>
 #include <QTimer>
 #include <X11/Xlib.h>
+#include <QEvent>
 #endif // INCLUDES_H
