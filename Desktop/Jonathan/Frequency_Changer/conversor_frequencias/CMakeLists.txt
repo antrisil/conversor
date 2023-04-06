@@ -39,10 +39,8 @@ qt_add_qml_module(appconversor_frequencias
     QML_FILES settings.qml
     QML_FILES standby.qml
     QML_FILES temperature.qml
-    QML_FILES testando.qml
     QML_FILES grafic.qml
     QML_FILES bypass.qml
-    QML_FILES standbytest.qml
 )
 
 set_target_properties(appconversor_frequencias PROPERTIES

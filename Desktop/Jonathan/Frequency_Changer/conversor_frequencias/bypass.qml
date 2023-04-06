@@ -1,183 +1,125 @@
 import QtQuick
-import QtQuick.Controls
 
 Item {
     width: 640
     height: 480
-    signal exitClicked()
-    property bool bypassEnabled: false
+    Rectangle {
+        anchors.fill: parent
+        color: "black"
+    }
 
-    Rectangle{
-        id: bypass0
-        width: parent.width
-        height:  50
-        color: "#aaaaaa"
+    Rectangle {
+        id: circle
+        width: 250
+        height: width
+        radius: width / 2
+        color: "white"
         border.color: "black"
-        border.width: 1
+        border.width: 5
+        anchors.centerIn: parent
 
-        Text{
-            id: bypassText
-            color: "#000000"
-            text: "BYPASS"
-            font.bold: true
-            styleColor: "#000000"
+        Text {
+            id: load
+            text: "BOOTING"
             font.pointSize: 20
             anchors.centerIn: parent
         }
     }
 
-    ListView {
+    SequentialAnimation {
 
-            id: myListView
-            width: parent.width
-            height: parent.height - 50
-            y: 50
-            model: ListModel {
-                ListElement { name: "ByPass"; showSwitch: true; disable: false }
-                ListElement { name: "Exit"; showSwitch: false }
-            }
-            delegate: Rectangle {
-                width: myListView.width
-                height: myListView.height / 7
-                color: ListView.isCurrentItem ? "lightblue" : "white"
-                border.color: "black"
-                Text {
-                    text: name
-                    anchors.centerIn: parent
-                }
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: {
-                        myListView.currentIndex = index
-                        console.log("La opcion seleccionada es:", name);
-                    }
-                }
-                Switch {
-                        id: toggle
-                        checked: bypassEnabled
-                        visible: showSwitch
-                        anchors.verticalCenter: parent.verticalCenter
-                        anchors.right: parent.right
-                        anchors.rightMargin: 80
-                        onCheckedChanged: {
-                            myListView.model.setProperty(index, "disable", checked)
-                            bypassEnabled = checked
-                        }
-                    }
-            }
+        loops: Animation.Infinite
+
+        ColorAnimation {
+            target: circle
+            property: "border.color"
+            from: "black"
+            to: "blue"
+            duration: 1500
         }
 
-
-
-    Rectangle{
-        id: buttons1
-        width:80
-        height: alturaTela - 100
-        radius: 10
-        border.color: "black"
-        border.width: 1
-        x: -20; y: 50
-
-        Image {
-            id: arrow
-            fillMode: Image.PreserveAspectFit
-            source: "file:///home/jonathan/Desktop/Jonathan/Frequency_Changer/imagens/arrow.jpg"
-            width: 50
-            x: 25; y:50
-            transformOrigin: Item.Center
-            rotation: 270
+        PauseAnimation {
+            duration: 1000
         }
 
-        Image {
-            id: startop
-            fillMode: Image.PreserveAspectFit
-            source: "file:///home/jonathan/Desktop/Jonathan/Frequency_Changer/imagens/power.png"
-            width: 50
-            x: 25; y:290
-
+        ColorAnimation {
+            target: circle
+            property: "border.color"
+            from: "blue"
+            to: "black"
+            duration: 1500
         }
-        Button {
-            text: "up"
-            x: 25;y: 50
-            height: 50
-            width: 50
-            opacity: 0
-            onClicked: {
-                if (myListView.currentIndex >= -1) {
-                    myListView.currentIndex--;
-                    if(myListView.currentIndex === -1){
-                        myListView.currentIndex = myListView.count - 1
-                    }
-                }
-            }
-        }
+        running: true
     }
 
-    Rectangle{
-        id: buttons2
-        width:80
-        height: alturaTela - 100
-        radius: 10
-        border.color: "black"
-        border.width: 1
-        x: larguraTela-60; y: 50
+    SequentialAnimation {
 
-        Image {
-            id: arrow2
-            fillMode: Image.PreserveAspectFit
-            source: "file:///home/jonathan/Desktop/Jonathan/Frequency_Changer/imagens/arrow.jpg"
-            width: 50
-            x: 5; y:50
-            transformOrigin: Item.Center
-            rotation: 90
-        }
-        Image {
+        loops: Animation.Infinite
 
-            id: settingsIcon
-            fillMode: Image.PreserveAspectFit
-            source: "file:///home/jonathan/Desktop/Jonathan/Frequency_Changer/imagens/enter.png"
-            width: 50
-            x: 5; y:290
+        ColorAnimation {
+            target: load
+            property: "color"
+            from: "black"
+            to: "blue"
+            duration: 1500
         }
-        Button {
-                text: "Seleccionar"
-                width: 50
-                height: 50
-                x: 5;y: 290
-                opacity: 0
-                onClicked: {
-                    myListView.forceActiveFocus()
-                    var optionSelected = myListView.model.get(myListView.currentIndex).name
-                    if (myListView.currentItem != null) {
-                        console.log("La opcion seleccionada es:", optionSelected)
-                        if (optionSelected === "ByPass") {
-                            if(bypassEnabled){
-                            bypassEnabled = false;
-                            }
-                            else{
-                                bypassEnabled = true;
-                            }
-                        }
-                        else if(optionSelected === "Exit"){
-                            onClicked: exitClicked()
-                        }
-                    }
-                }
-            }
-        Button {
-            text: "down"
-            x: 5;y: 50
-            height: 50
-            width: 50
-            opacity: 0
-            onClicked: {
-                if (myListView.currentIndex <= myListView.count - 1) {
-                    myListView.currentIndex++;
-                    if(myListView.currentIndex === myListView.count){
-                        myListView.currentIndex = 0
-                    }
-                }
-            }
+
+        PauseAnimation {
+            duration: 1000
         }
+
+        ColorAnimation {
+            target: load
+            property: "color"
+            from: "blue"
+            to: "black"
+            duration: 1500
+        }
+        running: true
     }
+
+    SequentialAnimation {
+        loops: Animation.Infinite
+        PropertyAnimation {
+            target: circle;
+            property: "width";
+            to: 260;
+            duration: 1500
+        }
+
+        PropertyAnimation {
+            target: circle
+            property: "width"
+            to: 250
+            duration: 1500
+        }
+
+        PauseAnimation {
+            duration: 1000
+        }
+        running: true
+    }
+
+    SequentialAnimation {
+        loops: Animation.Infinite
+        PropertyAnimation {
+            target: load;
+            property: "font.pointSize";
+            to: 22;
+            duration: 1500
+        }
+
+        PropertyAnimation {
+            target: load
+            property: "font.pointSize"
+            to: 20
+            duration: 1500
+        }
+
+        PauseAnimation {
+            duration: 1000
+        }
+        running: true
+    }
+
 }

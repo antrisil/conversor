@@ -3,11 +3,108 @@
         {
             "className": "UserActivityDetector",
             "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "seconds",
+                    "notify": "SecondsChanged",
+                    "read": "getSeconds",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setSeconds"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "name": "minutes",
+                    "notify": "MinutesChanged",
+                    "read": "getMinutes",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setMinutes"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 2,
+                    "name": "hours",
+                    "notify": "HoursChanged",
+                    "read": "getHours",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setHours"
+                }
+            ],
             "qualifiedClassName": "UserActivityDetector",
             "signals": [
                 {
                     "access": "public",
                     "name": "userActivityDetected",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "SecondsChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "MinutesChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "HoursChanged",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "value",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "setSeconds",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "value",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "setMinutes",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "value",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "setHours",
                     "returnType": "void"
                 }
             ],

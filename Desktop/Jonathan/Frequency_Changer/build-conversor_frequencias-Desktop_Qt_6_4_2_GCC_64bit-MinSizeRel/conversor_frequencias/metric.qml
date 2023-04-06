@@ -6,15 +6,15 @@ Item {
     height: 480
     signal exitClicked()
 
-    Rectangle{
+    Rectangle {
         id: humidade
         width: parent.width
-        height:  50
+        height: 50
         color: "#aaaaaa"
         border.color: "black"
         border.width: 1
 
-        Text{
+        Text {
             id: humidadetext
             color: "#000000"
             text: "METRICS"
@@ -32,10 +32,16 @@ Item {
         height: parent.height - 50
         y: 50
         model: ListModel {
-                    ListElement { name: "Temperature" }
-                    ListElement { name: "Humidade" }
-                    ListElement { name: "Exit" }
-                }
+            ListElement {
+                name: "Temperature"
+            }
+            ListElement {
+                name: "Humidade"
+            }
+            ListElement {
+                name: "Exit"
+            }
+        }
         currentIndex: 2
         delegate: Rectangle {
             id: rects
@@ -45,7 +51,7 @@ Item {
             border.color: "black"
 
             Text {
-                text: name === "Temperature" ? "Temperature : " + (pcan.getTemp / 10).toString() + "°": name === "Humidade" ? "Humidade : " + (pcan.getHumidity / 10).toString() + "%": name
+                text: name === "Temperature" ? "Temperature : " + (pcan.getTemp / 10).toString() + "°" : name === "Humidade" ? "Humidade : " + (pcan.getHumidity / 10).toString() + "%" : name
                 anchors.centerIn: parent
             }
 
@@ -67,7 +73,6 @@ Item {
         border.color: "black"
         border.width: 1
         x: -20;y: 50
-
 
         Image {
             id: arrow
@@ -139,7 +144,7 @@ Item {
                 var optionSelected = myListView.model.get(myListView.currentIndex).name
                 if (myListView.currentItem != null) {
                     console.log("La opcion seleccionada es:", optionSelected)
-                    if(optionSelected === "Exit"){
+                    if (optionSelected === "Exit") {
                         onClicked: exitClicked()
                     }
                 }

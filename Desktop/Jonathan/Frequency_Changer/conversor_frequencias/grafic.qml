@@ -213,11 +213,11 @@ Item {
             height: 25
             model: ["1M", "5M", "10M", "30M", "1H", "2H", "5H", "12H", "1D", "3D", "1W"]
             background: Rectangle {
-                      id: selectTimecolor
-                      color: "#add8e6"
-                      border.width: 1
-                      radius: 5
-                }
+                id: selectTimecolor
+                color: "#add8e6"
+                border.width: 1
+                radius: 5
+            }
 
             Component.onCompleted: {
                 period = tableSelectorTime.currentText
@@ -363,12 +363,12 @@ Item {
             height: 25
             model: []
             background: Rectangle {
-                      id: colorboxSelector
-                      color: "#f0f8ff"
-                      border.width: 1
-                      radius: 5
+                id: colorboxSelector
+                color: "#f0f8ff"
+                border.width: 1
+                radius: 5
 
-                }
+            }
 
             Component.onCompleted: {
                 updateTableList()
@@ -405,11 +405,11 @@ Item {
             height: 25
             text: "Exit"
             background: Rectangle {
-                      id: buttonExit0color
-                      color: "#f0f8ff"
-                      border.width: 1
-                      radius: 5
-                }
+                id: buttonExit0color
+                color: "#f0f8ff"
+                border.width: 1
+                radius: 5
+            }
             onClicked: {
                 onClicked: exitClicked()
             }
@@ -452,38 +452,34 @@ Item {
             onClicked: {
                 if (currentComb === 1 && sele === false || currentComb === 2 && sele === false) {
                     currentComb--
-                }
-                else if (currentComb === 0 && sele === false){
+                } else if (currentComb === 0 && sele === false) {
                     currentComb = 2
-                }else if (currentComb === 0 && sele) {
+                } else if (currentComb === 0 && sele) {
                     if (tableSelectorTime.currentIndex === 0) {
-                        tableSelectorTime.currentIndex = tableSelectorTime.count -1
+                        tableSelectorTime.currentIndex = tableSelectorTime.count - 1
                     } else {
                         tableSelectorTime.currentIndex--
                     }
-                }else if(currentComb === 1 && sele){
+                } else if (currentComb === 1 && sele) {
                     if (tableSelector.currentIndex > 0) {
                         tableSelector.currentIndex--
                     } else {
                         tableSelector.currentIndex = tableSelector.count - 1
                     }
                 }
-                if(currentComb === 0 && sele === false){
+                if (currentComb === 0 && sele === false) {
                     selectTimecolor.color = "#add8e6"
-                }
-                else if (currentComb != 0){
+                } else if (currentComb != 0) {
                     selectTimecolor.color = "#f0f8ff"
                 }
-                if(currentComb === 1 && sele === false){
+                if (currentComb === 1 && sele === false) {
                     colorboxSelector.color = "#add8e6"
-                }
-                else if (currentComb != 1){
+                } else if (currentComb != 1) {
                     colorboxSelector.color = "#f0f8ff"
                 }
-                if(currentComb === 2 && sele === false){
+                if (currentComb === 2 && sele === false) {
                     buttonExit0color.color = "#add8e6"
-                }
-                else if (currentComb != 2){
+                } else if (currentComb != 2) {
                     buttonExit0color.color = "#f0f8ff"
                 }
 
@@ -531,32 +527,28 @@ Item {
                     } else {
                         tableSelectorTime.currentIndex = 0
                     }
-                }else if(currentComb === 1 && sele){
+                } else if (currentComb === 1 && sele) {
                     if (tableSelector.currentIndex < tableSelector.count - 1) {
                         tableSelector.currentIndex++
                     } else {
                         tableSelector.currentIndex = 0
                     }
-                }
-                else if (currentComb == 2 && sele === false) {
+                } else if (currentComb == 2 && sele === false) {
                     currentComb = 0
                 }
-                if(currentComb === 0 && sele === false){
+                if (currentComb === 0 && sele === false) {
                     selectTimecolor.color = "#add8e6"
-                }
-                else if (currentComb != 0){
+                } else if (currentComb != 0) {
                     selectTimecolor.color = "#f0f8ff"
                 }
-                if(currentComb === 1 && sele === false){
+                if (currentComb === 1 && sele === false) {
                     colorboxSelector.color = "#add8e6"
-                }
-                else if (currentComb != 1){
+                } else if (currentComb != 1) {
                     colorboxSelector.color = "#f0f8ff"
                 }
-                if(currentComb === 2 && sele === false){
+                if (currentComb === 2 && sele === false) {
                     buttonExit0color.color = "#add8e6"
-                }
-                else if (currentComb != 2){
+                } else if (currentComb != 2) {
                     buttonExit0color.color = "#f0f8ff"
                 }
             }

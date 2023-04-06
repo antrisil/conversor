@@ -3,15 +3,16 @@ Item {
     visible: true
     property int larguraTela: 640
     property int alturaTela: 480
-    property var states
+    property
+    var states
     width: 640
     height: 480
 
-    Rectangle{
+    Rectangle {
         id: workspace
         anchors.fill: parent
 
-        Loader{
+        Loader {
             id: loader
             anchors.fill: parent
         }
@@ -19,8 +20,8 @@ Item {
         state: "monitor"
         states: [
 
-            State{
-                name:"booting"
+            State {
+                name: "booting"
                 PropertyChanges {
                     target: loader
                     source: "booting.qml"
@@ -28,8 +29,8 @@ Item {
                 }
             },
 
-            State{
-                name:"monitor"
+            State {
+                name: "monitor"
                 PropertyChanges {
                     target: loader
                     source: "MONITOR.qml"
@@ -37,8 +38,8 @@ Item {
                 }
             },
 
-            State{
-                name:"settings"
+            State {
+                name: "settings"
                 PropertyChanges {
                     target: loader
                     source: "settings.qml"
@@ -46,8 +47,8 @@ Item {
                 }
             },
 
-            State{
-                name:"graphics"
+            State {
+                name: "graphics"
                 PropertyChanges {
                     target: loader
                     source: "grafic.qml"
@@ -55,8 +56,8 @@ Item {
                 }
             },
 
-            State{
-                name:"languages"
+            State {
+                name: "languages"
                 PropertyChanges {
                     target: loader
                     source: "languages.qml"
@@ -64,8 +65,8 @@ Item {
                 }
             },
 
-            State{
-                name:"standby"
+            State {
+                name: "standby"
                 PropertyChanges {
                     target: loader
                     source: "standby.qml"
@@ -73,8 +74,8 @@ Item {
                 }
             },
 
-            State{
-                name:"output"
+            State {
+                name: "output"
                 PropertyChanges {
                     target: loader
                     source: "output.qml"
@@ -82,17 +83,16 @@ Item {
                 }
             },
 
-            State{
-                name:"bypass"
+            State {
+                name: "bypass"
                 PropertyChanges {
                     target: loader
                     source: "bypass.qml"
                 }
             },
 
-
-            State{
-                name:"metric"
+            State {
+                name: "metric"
                 PropertyChanges {
                     target: loader
                     source: "metric.qml"
@@ -103,41 +103,40 @@ Item {
         ]
 
         Connections {
-                    target: loader.item
-                    onExitClicked: {
-                        workspace.state = "monitor"
-                    }
-                    onMonitorToSettings: {
-                        workspace.state = "settings"
-                    }
-                    onLanguagesClicked: {
-                        workspace.state = "languages"
-                    }
-                    onOutputClicked:{
-                        workspace.state = "output"
-                    }
-                    onMetricsClicked: {
-                        workspace.state = "metric"
-                    }
-                    onBypassClicked:{
-                        workspace.state = "bypass"
-                    }
-                    onStandbyClicked:{
-                        workspace.state = "standby"
-                    }
-                    onMaintenanceClicked:{
-                        workspace.state = "graphics"
-                    }
-                }
+            target: loader.item
+            onExitClicked: {
+                workspace.state = "monitor"
+            }
+            onMonitorToSettings: {
+                workspace.state = "settings"
+            }
+            onLanguagesClicked: {
+                workspace.state = "languages"
+            }
+            onOutputClicked: {
+                workspace.state = "output"
+            }
+            onMetricsClicked: {
+                workspace.state = "metric"
+            }
+            onBypassClicked: {
+                workspace.state = "bypass"
+            }
+            onStandbyClicked: {
+                workspace.state = "standby"
+            }
+            onMaintenanceClicked: {
+                workspace.state = "graphics"
+            }
+        }
 
-
-//        MouseArea  {
-//            anchors.fill: parent
-//            onClicked: {
-//                var states =["booting", "monitor", "settings", "graphics", "languages", "standby", "output", "bypass", "metric"]
-//                var nextIndex = (states.indexOf(parent.state)+1)%states.length
-//                parent.state = states[nextIndex]
-//            }
-//        }
+        //        MouseArea  {
+        //            anchors.fill: parent
+        //            onClicked: {
+        //                var states =["booting", "monitor", "settings", "graphics", "languages", "standby", "output", "bypass", "metric"]
+        //                var nextIndex = (states.indexOf(parent.state)+1)%states.length
+        //                parent.state = states[nextIndex]
+        //            }
+        //        }
     }
 }

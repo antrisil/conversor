@@ -68,13 +68,6 @@ namespace _conversor_frequencias_temperature_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
-namespace _conversor_frequencias_testando_qml { 
-    extern const unsigned char qmlData[];
-    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
-    const QQmlPrivate::CachedQmlUnit unit = {
-        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
-    };
-}
 namespace _conversor_frequencias_grafic_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
@@ -83,13 +76,6 @@ namespace _conversor_frequencias_grafic_qml {
     };
 }
 namespace _conversor_frequencias_bypass_qml { 
-    extern const unsigned char qmlData[];
-    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
-    const QQmlPrivate::CachedQmlUnit unit = {
-        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
-    };
-}
-namespace _conversor_frequencias_standbytest_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
     const QQmlPrivate::CachedQmlUnit unit = {
@@ -119,10 +105,8 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/conversor_frequencias/settings.qml"), &QmlCacheGeneratedCode::_conversor_frequencias_settings_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/conversor_frequencias/standby.qml"), &QmlCacheGeneratedCode::_conversor_frequencias_standby_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/conversor_frequencias/temperature.qml"), &QmlCacheGeneratedCode::_conversor_frequencias_temperature_qml::unit);
-    resourcePathToCachedUnit.insert(QStringLiteral("/conversor_frequencias/testando.qml"), &QmlCacheGeneratedCode::_conversor_frequencias_testando_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/conversor_frequencias/grafic.qml"), &QmlCacheGeneratedCode::_conversor_frequencias_grafic_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/conversor_frequencias/bypass.qml"), &QmlCacheGeneratedCode::_conversor_frequencias_bypass_qml::unit);
-    resourcePathToCachedUnit.insert(QStringLiteral("/conversor_frequencias/standbytest.qml"), &QmlCacheGeneratedCode::_conversor_frequencias_standbytest_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;
     registration.lookupCachedQmlUnit = &lookupCachedUnit;

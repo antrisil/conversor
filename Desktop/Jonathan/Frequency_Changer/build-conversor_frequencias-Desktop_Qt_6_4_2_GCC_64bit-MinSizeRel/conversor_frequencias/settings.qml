@@ -38,13 +38,27 @@ Item {
         height: parent.height - 50
         y: 50
         model: ListModel {
-            ListElement { name: "Home" }
-            ListElement { name: "Language" }
-            ListElement { name: "Output" }
-            ListElement { name: "Metrics" }
-            ListElement { name: "Bypass" }
-            ListElement { name: "Stand By" }
-            ListElement { name: "Maintenance" }
+            ListElement {
+                name: "Home"
+            }
+            ListElement {
+                name: "Language"
+            }
+            ListElement {
+                name: "Output"
+            }
+            ListElement {
+                name: "Metrics"
+            }
+            ListElement {
+                name: "Bypass"
+            }
+            ListElement {
+                name: "Stand By"
+            }
+            ListElement {
+                name: "Maintenance"
+            }
         }
         delegate: Rectangle {
             width: myListView.width
@@ -64,9 +78,6 @@ Item {
             }
         }
     }
-
-
-
 
     Rectangle {
         id: buttons1
@@ -103,7 +114,7 @@ Item {
             onClicked: {
                 if (myListView.currentIndex >= -1) {
                     myListView.currentIndex--;
-                    if(myListView.currentIndex === -1){
+                    if (myListView.currentIndex === -1) {
                         myListView.currentIndex = myListView.count - 1
                     }
                 }
@@ -146,7 +157,7 @@ Item {
             onClicked: {
                 if (myListView.currentIndex <= myListView.count - 1) {
                     myListView.currentIndex++;
-                    if(myListView.currentIndex === myListView.count){
+                    if (myListView.currentIndex === myListView.count) {
                         myListView.currentIndex = 0
                     }
                 }
@@ -163,25 +174,25 @@ Item {
                 var optionSelected = myListView.model.get(myListView.currentIndex).name
                 if (myListView.currentItem != null) {
                     console.log("La opcion seleccionada es:", optionSelected)
-                    if(optionSelected === "Home"){
+                    if (optionSelected === "Home") {
                         onClicked: exitClicked()
                     }
-                    else if(optionSelected === "Language"){
+                    else if (optionSelected === "Language") {
                         onClicked: languagesClicked()
                     }
-                    else if(optionSelected === "Output"){
+                    else if (optionSelected === "Output") {
                         onClicked: outputClicked()
                     }
-                    else if(optionSelected === "Metrics"){
+                    else if (optionSelected === "Metrics") {
                         onClicked: metricsClicked()
                     }
-                    else if(optionSelected === "Bypass"){
+                    else if (optionSelected === "Bypass") {
                         onClicked: bypassClicked()
                     }
-                    else if(optionSelected === "Stand By"){
+                    else if (optionSelected === "Stand By") {
                         onClicked: standbyClicked()
                     }
-                    else if(optionSelected === "Maintenance"){
+                    else if (optionSelected === "Maintenance") {
                         onClicked: maintenanceClicked()
                     }
                 } else {

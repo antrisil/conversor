@@ -7,6 +7,7 @@
 #include <QThread>
 #include <thread>
 #include <QDateTime>
+#include <QTime>
 #include <QObject>
 #include <QtConcurrent>
 #include <QtConcurrentRun>

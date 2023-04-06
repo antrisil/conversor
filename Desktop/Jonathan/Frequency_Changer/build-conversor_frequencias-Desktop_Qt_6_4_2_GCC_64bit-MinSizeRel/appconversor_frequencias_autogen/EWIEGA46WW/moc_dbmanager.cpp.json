@@ -5,11 +5,6 @@
             "methods": [
                 {
                     "access": "public",
-                    "name": "selectAllTables",
-                    "returnType": "QList<QString>"
-                },
-                {
-                    "access": "public",
                     "arguments": [
                         {
                             "name": "currentTable",
@@ -28,6 +23,11 @@
                     "access": "public",
                     "name": "getLoad2",
                     "returnType": "QList<double>"
+                },
+                {
+                    "access": "public",
+                    "name": "selectAllTables",
+                    "returnType": "QList<QString>"
                 }
             ],
             "object": true,
@@ -86,10 +86,105 @@
                     "stored": true,
                     "type": "QString",
                     "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 4,
+                    "name": "getHours",
+                    "notify": "HourChanged",
+                    "read": "getHours",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setHours"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 5,
+                    "name": "getMinutes",
+                    "notify": "MinutesChanged",
+                    "read": "getMinutes",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setMinutes"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 6,
+                    "name": "getSeconds",
+                    "notify": "SecondsChanged",
+                    "read": "getSeconds",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setSeconds"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 8,
+                    "name": "output",
+                    "notify": "OutputChanged",
+                    "read": "getOutput",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setOutput"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 10,
+                    "name": "language",
+                    "notify": "LanguageChanged",
+                    "read": "getLanguage",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false,
+                    "write": "setLanguage"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 11,
+                    "name": "bypass",
+                    "notify": "BypassChanged",
+                    "read": "getBypass",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setBypass"
                 }
             ],
             "qualifiedClassName": "DbManager",
             "signals": [
+                {
+                    "access": "public",
+                    "name": "LanguageChanged",
+                    "returnType": "void"
+                },
                 {
                     "access": "public",
                     "name": "LoadChanged",
@@ -108,6 +203,139 @@
                 {
                     "access": "public",
                     "name": "LastChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "HourChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "MinutesChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "SecondsChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "UpdateStandbyChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "OutputChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "UpdateOutputChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "BypassChanged",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "name": "getOutput",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "name": "getBypass",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "name": "updateStandby",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "updateOutput",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "updateLanguage",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "updateBypass",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "value",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "setSeconds",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "value",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "setMinutes",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "value",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "setHours",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "value",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "setOutput",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "value",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "setBypass",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "value",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "setLanguage",
                     "returnType": "void"
                 }
             ],

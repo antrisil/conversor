@@ -9,10 +9,8 @@
     <file alias="settings.qml">/home/jonathan/Desktop/Jonathan/Frequency_Changer/conversor_frequencias/settings.qml</file>
     <file alias="standby.qml">/home/jonathan/Desktop/Jonathan/Frequency_Changer/conversor_frequencias/standby.qml</file>
     <file alias="temperature.qml">/home/jonathan/Desktop/Jonathan/Frequency_Changer/conversor_frequencias/temperature.qml</file>
-    <file alias="testando.qml">/home/jonathan/Desktop/Jonathan/Frequency_Changer/conversor_frequencias/testando.qml</file>
     <file alias="grafic.qml">/home/jonathan/Desktop/Jonathan/Frequency_Changer/conversor_frequencias/grafic.qml</file>
     <file alias="bypass.qml">/home/jonathan/Desktop/Jonathan/Frequency_Changer/conversor_frequencias/bypass.qml</file>
-    <file alias="standbytest.qml">/home/jonathan/Desktop/Jonathan/Frequency_Changer/conversor_frequencias/standbytest.qml</file>
   </qresource>
 </RCC>
 

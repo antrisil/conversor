@@ -1,26 +1,22 @@
 #include "dbmanager.h"
-
 #include "pcan.h"
 #include "useractivitydetector.h"
-
 #include <QGuiApplication>
-
 #include <QQmlApplicationEngine>
-
 #include <stdlib.h>
-
 #include <unistd.h>
-
 #include <timer.h>
 
-
-
 //constructors
-
 DbManager * db = new DbManager();
 pcan * pcan_ = new pcan();
+timer idleTimer;
 
 //methods to main
+void remaining() {
+    idleTimer.remainingTimer();
+}
+
 void _pcan() {
     QString errorString;
     can_do_stop("can0");
@@ -45,12 +41,18 @@ void dbmanager() {
     db -> createTable();
     db -> dropOlderTable();
     db -> keep100rows();
+    db -> selectSerialNumber();
+    db -> selectStandby();
+    db -> selectOutput();
+    idleTimer.setSeconds(db -> getSeconds());
+    idleTimer.setMinutes(db -> getMinutes());
+    idleTimer.setHours(db -> getHours());
     db -> insertIntoTable();
-
 }
 
 void _db_() {
     //    db->lastOne();
+
     db -> selectLoad();
 }
 
@@ -60,24 +62,22 @@ int main(int argc, char * argv[]) {
     QtConcurrent::run(_pcan);
     QtConcurrent::run(dbmanager);
     QtConcurrent::run(_db_);
-
+    QtConcurrent::run(remaining);
 
     // Qt Charts uses Qt Graphics View Framework for drawing, therefore QApplication must be used.
     QApplication app(argc, argv);
     QQuickView viewer;
+    UserActivityDetector activityDetector;
+
+    app.installEventFilter( & activityDetector);
+
+    QObject::connect( & activityDetector, & UserActivityDetector::userActivityDetected, &
+                                                                                     idleTimer, & timer::resetTimer);
+    QObject::connect( & idleTimer, & timer::userActivity, & idleTimer, & timer::standby);
     viewer.engine() -> rootContext() -> setContextProperty("pcan", pcan_);
     viewer.engine() -> rootContext() -> setContextProperty("db", db);
+    viewer.engine() -> rootContext() -> setContextProperty("idleTimer", & idleTimer);
     viewer.setSource(QUrl::fromLocalFile("/home/jonathan/Desktop/Jonathan/Frequency_Changer/conversor_frequencias/main.qml"));
-//      system("xset dpms force off");
-    UserActivityDetector activityDetector;
-    app.installEventFilter(&activityDetector);
-
-    timer idleTimer;
-    QObject::connect(&activityDetector, &UserActivityDetector::userActivityDetected,
-                     &idleTimer, &timer::resetTimer);
-    QObject::connect(&idleTimer, &timer::userActivity, &idleTimer, &timer::standby);
-
-
 
     // The following are needed to make examples run without having to install the module
     // in desktop environments.

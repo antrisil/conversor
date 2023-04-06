@@ -7,17 +7,17 @@ Item {
     signal exitClicked()
     property bool plus: false
 
-    property int myNumber: 0
+    property int myNumber: db.getOutput()
 
-    Rectangle{
+    Rectangle {
         id: output
         width: parent.width
-        height:  50
+        height: 50
         color: "#aaaaaa"
         border.color: "black"
         border.width: 1
 
-        Text{
+        Text {
             id: outputtext
             color: "#000000"
             text: "OUTPUT"
@@ -65,9 +65,13 @@ Item {
         height: parent.height - 50
         y: 50
         model: ListModel {
-                    ListElement { name: "Output" }
-                    ListElement { name: "Exit" }
-                }
+            ListElement {
+                name: "Output"
+            }
+            ListElement {
+                name: "Exit"
+            }
+        }
         delegate: Rectangle {
             id: rects
             width: myListView.width
@@ -90,14 +94,18 @@ Item {
     }
 
     function increaseNumber() {
-        if(myNumber<200){
-        myNumber = myNumber + 1
+        if (myNumber < 200) {
+            myNumber = myNumber + 1
+            db.setOutput(myNumber)
+            db.updateOutput()
         }
     }
 
     function decreaseNumber() {
-        if(myNumber>0){
-        myNumber = myNumber - 1
+        if (myNumber > 0) {
+            myNumber = myNumber - 1
+            db.setOutput(myNumber)
+            db.updateOutput()
         }
     }
 
@@ -135,25 +143,24 @@ Item {
             width: 50
             opacity: 0
             onClicked: {
-                if(plus === false){
-                if (myListView.currentIndex >= -1) {
-                    myListView.currentIndex--;
-                    if(myListView.currentIndex === -1){
-                        myListView.currentIndex = myListView.count - 1
+                if (plus === false) {
+                    if (myListView.currentIndex >= -1) {
+                        myListView.currentIndex--;
+                        if (myListView.currentIndex === -1) {
+                            myListView.currentIndex = myListView.count - 1
+                        }
                     }
-                }
-                }
-                else if(plus){
+                } else if (plus) {
                     increaseNumber()
                 }
             }
             onPressedChanged: {
-                if(plus){
-                if (pressed) {
-                    timer.start()
-                } else {
-                    timer2.stop()
-                }
+                if (plus) {
+                    if (pressed) {
+                        timer.start()
+                    } else {
+                        timer2.stop()
+                    }
                 }
             }
         }
@@ -168,17 +175,16 @@ Item {
                 var optionSelected = myListView.model.get(myListView.currentIndex).name
                 if (myListView.currentItem != null) {
                     console.log("La opcion seleccionada es:", optionSelected)
-                    if(optionSelected === "Exit"){
+                    if (optionSelected === "Exit") {
                         onClicked: exitClicked()
                     }
-                    else if(optionSelected === "Output"){
-                        if(plus){
+                    else if (optionSelected === "Output") {
+                        if (plus) {
                             plus = false
                             arrow2.source = "file:///home/jonathan/Desktop/Jonathan/Frequency_Changer/imagens/arrow.jpg"
                             arrow.source = "file:///home/jonathan/Desktop/Jonathan/Frequency_Changer/imagens/arrow.jpg"
                             arrow.rotation = 270
-                        }
-                        else{
+                        } else {
                             plus = true
                             arrow2.source = "file:///home/jonathan/Desktop/Jonathan/Frequency_Changer/imagens/plus.png"
                             arrow.source = "file:///home/jonathan/Desktop/Jonathan/Frequency_Changer/imagens/less.png"
@@ -225,26 +231,24 @@ Item {
             width: 50
             opacity: 0
             onClicked: {
-                if(plus === false){
-                if (myListView.currentIndex >= -1) {
-                    myListView.currentIndex--;
-                    if(myListView.currentIndex === -1){
-                        myListView.currentIndex = myListView.count - 1
+                if (plus === false) {
+                    if (myListView.currentIndex >= -1) {
+                        myListView.currentIndex--;
+                        if (myListView.currentIndex === -1) {
+                            myListView.currentIndex = myListView.count - 1
+                        }
                     }
+                } else if (plus) {
+                    decreaseNumber()
                 }
-                }
-
-            else if(plus){
-                decreaseNumber()
-            }
             }
             onPressedChanged: {
-                if(plus){
-                if (pressed) {
-                    timer.start()
-                } else {
-                    timer2.stop()
-                }
+                if (plus) {
+                    if (pressed) {
+                        timer.start()
+                    } else {
+                        timer2.stop()
+                    }
                 }
             }
         }

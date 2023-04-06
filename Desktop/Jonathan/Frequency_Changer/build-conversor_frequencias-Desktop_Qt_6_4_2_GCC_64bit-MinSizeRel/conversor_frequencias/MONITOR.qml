@@ -1,9 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 
-
-
-Item{
+Item {
     width: 640
     height: 480
     property int larguraTela: 640
@@ -11,8 +9,7 @@ Item{
 
     signal monitorToSettings()
 
-
-    Rectangle{
+    Rectangle {
         id: retangulo1
         width: parent.width * 0.5
         height: parent.height * 0.5
@@ -21,7 +18,7 @@ Item{
         border.color: "black"
         border.width: 1
 
-        Text{
+        Text {
             id: voltIn
             text: "VoltIn"
             font.pointSize: 12
@@ -29,34 +26,32 @@ Item{
             y: (parent.height / 2) - 70
         }
 
-         Text {
+        Text {
             id: voltInValueL1
-            text: qsTr("L1: "+ (pcan.getAB / 10.0))
+            text: qsTr("L1: " + (pcan.getAB / 10.0))
             font.pointSize: 20
             anchors.horizontalCenter: parent.horizontalCenter
-            y: (parent.height / 2) -50
+            y: (parent.height / 2) - 50
         }
 
-
-
-        Text{
+        Text {
             id: voltInValueL2
             text: qsTr("L2: " + pcan.getBC / 10.0)
             font.pointSize: 20
             anchors.horizontalCenter: parent.horizontalCenter
-            y: (parent.height / 2) -10
+            y: (parent.height / 2) - 10
         }
 
-        Text{
+        Text {
             id: voltInValueL3
             text: qsTr("L3: " + pcan.getCA / 10.0)
             font.pointSize: 20
             anchors.horizontalCenter: parent.horizontalCenter
-            y: (parent.height / 2) +30
+            y: (parent.height / 2) + 30
         }
     }
 
-    Rectangle{
+    Rectangle {
         id: retangulo3
         width: parent.width * 0.5
         height: parent.height * 0.5
@@ -73,34 +68,32 @@ Item{
             y: (parent.height / 2) - 70
         }
 
-
         Text {
             id: voltOutValueL1
             text: qsTr("L1: " + (pcan.getInvPhaseAVolt / 10.0))
             font.pointSize: 20
             anchors.horizontalCenter: parent.horizontalCenter
-            y: (parent.height / 2) -50
+            y: (parent.height / 2) - 50
         }
 
-
-        Text{
+        Text {
             id: voltOutValueL2
             text: qsTr("L2: " + (pcan.getInvPhaseBVolt / 10.0))
             font.pointSize: 20
             anchors.horizontalCenter: parent.horizontalCenter
-            y: (parent.height / 2) -10
+            y: (parent.height / 2) - 10
         }
 
-        Text{
+        Text {
             id: voltOutValueL3
             text: qsTr("L3: " + (pcan.getInvPhaseCVolt / 10.0))
             font.pointSize: 20
             anchors.horizontalCenter: parent.horizontalCenter
-            y: (parent.height / 2) +30
+            y: (parent.height / 2) + 30
         }
     }
 
-    Rectangle{
+    Rectangle {
         id: retangulo4
         width: parent.width * 0.5
         height: parent.height * 0.5
@@ -119,7 +112,7 @@ Item{
         }
     }
 
-    Rectangle{
+    Rectangle {
         id: retangulo2
         width: parent.width * 0.5
         height: parent.height * 0.5
@@ -137,17 +130,17 @@ Item{
         }
     }
 
-    Rectangle{
+    Rectangle {
         id: circle
         width: 200
         height: width
-        radius: width/2
+        radius: width / 2
         color: "white"
         border.color: "black"
         border.width: 2
         anchors.centerIn: parent
 
-        Text{
+        Text {
             id: load
             text: "LOAD"
             font.pointSize: 12
@@ -165,21 +158,21 @@ Item{
 
     }
 
-    Rectangle{
+    Rectangle {
         id: buttons1
-        width:80
+        width: 80
         height: alturaTela - 100
         radius: 10
         border.color: "black"
         border.width: 1
-        x: -20; y: 50
+        x: -20;y: 50
 
         Image {
             id: arrow
             fillMode: Image.PreserveAspectFit
             source: "file:///home/jonathan/Desktop/Jonathan/Frequency_Changer/imagens/barra1.png"
             width: 50
-            x: 25; y:50
+            x: 25;y: 50
             transformOrigin: Item.Center
         }
 
@@ -188,26 +181,26 @@ Item{
             fillMode: Image.PreserveAspectFit
             source: "file:///home/jonathan/Desktop/Jonathan/Frequency_Changer/imagens/power.png"
             width: 50
-            x: 25; y:290
+            x: 25;y: 290
 
         }
     }
 
-    Rectangle{
+    Rectangle {
         id: buttons2
-        width:80
+        width: 80
         height: alturaTela - 100
         radius: 10
         border.color: "black"
         border.width: 1
-        x: larguraTela-60; y: 50
+        x: larguraTela - 60;y: 50
 
         Image {
             id: arrow2
             fillMode: Image.PreserveAspectFit
             source: "file:///home/jonathan/Desktop/Jonathan/Frequency_Changer/imagens/barra1.png"
             width: 50
-            x: 5; y:50
+            x: 5;y: 50
             rotation: 90
         }
 
@@ -216,24 +209,24 @@ Item{
             fillMode: Image.PreserveAspectFit
             source: "file:///home/jonathan/Desktop/Jonathan/Frequency_Changer/imagens/settings.png"
             width: 50
-            x: 5; y:290
+            x: 5;y: 290
 
-        } 
+        }
 
-        Button{
+        Button {
             id: buttonSettings
             width: arrow2.width
             height: arrow2.height
             opacity: 0
             x: 5
-            y:290
+            y: 290
             onClicked: {
                 monitorToSettings()
             }
         }
     }
 
-    SequentialAnimation{
+    SequentialAnimation {
         loops: Animation.Infinite
 
         ColorAnimation {
@@ -260,4 +253,3 @@ Item{
         running: true
     }
 }
-

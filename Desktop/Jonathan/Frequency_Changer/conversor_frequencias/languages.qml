@@ -6,15 +6,15 @@ Item {
     height: 480
     signal exitClicked()
 
-    Rectangle{
+    Rectangle {
         id: idioma
         width: parent.width
-        height:  50
+        height: 50
         color: "#aaaaaa"
         border.color: "black"
         border.width: 1
 
-        Text{
+        Text {
             id: idiomaText
             color: "#000000"
             text: "LANGUAGE"
@@ -32,9 +32,15 @@ Item {
         height: parent.height - 50
         y: 50
         model: ListModel {
-            ListElement { name: "English" }
-            ListElement { name: "Portuguese" }
-            ListElement { name: "Exit" }
+            ListElement {
+                name: "English"
+            }
+            ListElement {
+                name: "Portuguese"
+            }
+            ListElement {
+                name: "Exit"
+            }
         }
         delegate: Rectangle {
             width: myListView.width
@@ -90,7 +96,7 @@ Item {
             onClicked: {
                 if (myListView.currentIndex >= -1) {
                     myListView.currentIndex--;
-                    if(myListView.currentIndex === -1){
+                    if (myListView.currentIndex === -1) {
                         myListView.currentIndex = myListView.count - 1
                     }
                 }
@@ -133,7 +139,7 @@ Item {
             onClicked: {
                 if (myListView.currentIndex <= myListView.count - 1) {
                     myListView.currentIndex++;
-                    if(myListView.currentIndex === myListView.count){
+                    if (myListView.currentIndex === myListView.count) {
                         myListView.currentIndex = 0
                     }
                 }
@@ -149,8 +155,11 @@ Item {
                 myListView.forceActiveFocus()
                 var optionSelected = myListView.model.get(myListView.currentIndex).name
                 if (myListView.currentItem != null) {
-                    console.log("La opcion seleccionada es:", optionSelected)
-                    if(optionSelected === "Exit"){
+                    db.setLanguage(optionSelected)
+                    if (optionSelected !== "Exit") {
+                        db.updateLanguage(optionSelected)
+                        console.log("La opcion seleccionada es:", optionSelected)
+                    } else if (optionSelected === "Exit") {
                         onclicked: exitClicked()
                     }
                 } else {

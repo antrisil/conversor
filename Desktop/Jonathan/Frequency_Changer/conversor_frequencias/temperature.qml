@@ -3,15 +3,15 @@ import QtQuick
 Item {
     width: 640
     height: 480
-    Rectangle{
+    Rectangle {
         id: temperature
         width: parent.width
-        height:  50
+        height: 50
         color: "#aaaaaa"
         border.color: "black"
         border.width: 1
 
-        Text{
+        Text {
             id: temperaturetext
             color: "#000000"
             text: "TEMPERATURE"
@@ -22,7 +22,7 @@ Item {
         }
     }
 
-    Rectangle{
+    Rectangle {
         id: temperature1
         width: parent.width
         height: 50
@@ -30,7 +30,7 @@ Item {
         border.color: "black"
         border.width: 1
 
-        Text{
+        Text {
             id: temperatureText
             text: "Temperature :"
             font.pointSize: 20
@@ -38,7 +38,7 @@ Item {
             x: 80
         }
 
-        Text{
+        Text {
             id: temp
             text: (pcan.getTemp / 10) + "°"
             font.pointSize: 20
@@ -47,7 +47,7 @@ Item {
         }
     }
 
-    Rectangle{
+    Rectangle {
         id: exit
         width: parent.width
         height: 50
@@ -55,7 +55,7 @@ Item {
         border.color: "black"
         border.width: 1
 
-        Text{
+        Text {
             id: exitText
             text: "Exit"
             font.pointSize: 20
@@ -63,21 +63,21 @@ Item {
         }
     }
 
-    Rectangle{
+    Rectangle {
         id: buttons1
-        width:80
+        width: 80
         height: alturaTela - 100
         radius: 10
         border.color: "black"
         border.width: 1
-        x: -20; y: 50
+        x: -20;y: 50
 
         Image {
             id: arrow
             fillMode: Image.PreserveAspectFit
             source: "file:///home/jonathan/Desktop/Jonathan/Frequency_Changer/imagens/arrow.jpg"
             width: 50
-            x: 25; y:50
+            x: 25;y: 50
             transformOrigin: Item.Center
             rotation: 270
         }
@@ -87,26 +87,26 @@ Item {
             fillMode: Image.PreserveAspectFit
             source: "file:///home/jonathan/Desktop/Jonathan/Frequency_Changer/imagens/power.png"
             width: 50
-            x: 25; y:290
+            x: 25;y: 290
 
         }
     }
 
-    Rectangle{
+    Rectangle {
         id: buttons2
-        width:80
+        width: 80
         height: alturaTela - 100
         radius: 10
         border.color: "black"
         border.width: 1
-        x: larguraTela-60; y: 50
+        x: larguraTela - 60;y: 50
 
         Image {
             id: arrow2
             fillMode: Image.PreserveAspectFit
             source: "file:///home/jonathan/Desktop/Jonathan/Frequency_Changer/imagens/arrow.jpg"
             width: 50
-            x: 5; y:50
+            x: 5;y: 50
             transformOrigin: Item.Center
             rotation: 90
 
@@ -117,7 +117,7 @@ Item {
             fillMode: Image.PreserveAspectFit
             source: "file:///home/jonathan/Desktop/Jonathan/Frequency_Changer/imagens/enter.png"
             width: 50
-            x: 5; y:290
+            x: 5;y: 290
 
         }
     }

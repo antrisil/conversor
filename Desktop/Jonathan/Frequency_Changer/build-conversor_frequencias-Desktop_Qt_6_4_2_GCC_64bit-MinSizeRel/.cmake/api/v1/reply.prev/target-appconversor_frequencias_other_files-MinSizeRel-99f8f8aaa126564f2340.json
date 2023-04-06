@@ -221,18 +221,6 @@
 				"file" : 0,
 				"line" : 1594,
 				"parent" : 32
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 1727,
-				"parent" : 9
-			},
-			{
-				"command" : 6,
-				"file" : 0,
-				"line" : 1594,
-				"parent" : 34
 			}
 		]
 	},
@@ -261,8 +249,7 @@
 				9,
 				10,
 				11,
-				12,
-				13
+				12
 			]
 		}
 	],
@@ -331,11 +318,6 @@
 		{
 			"backtrace" : 33,
 			"path" : "bypass.qml",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 35,
-			"path" : "standbytest.qml",
 			"sourceGroupIndex" : 0
 		}
 	],

@@ -62,6 +62,7 @@ appconversor_frequencias_autogen/timestamp: \
   /home/jonathan/Qt/6.4.2/gcc_64/include/QtCore/QString \
   /home/jonathan/Qt/6.4.2/gcc_64/include/QtCore/QStringList \
   /home/jonathan/Qt/6.4.2/gcc_64/include/QtCore/QThread \
+  /home/jonathan/Qt/6.4.2/gcc_64/include/QtCore/QTime \
   /home/jonathan/Qt/6.4.2/gcc_64/include/QtCore/QTimer \
   /home/jonathan/Qt/6.4.2/gcc_64/include/QtCore/QUrl \
   /home/jonathan/Qt/6.4.2/gcc_64/include/QtCore/QVariant \
