@@ -20,6 +20,7 @@ find_package(Qt6LinguistTools REQUIRED)
 set(LANGUAGES pt)
 set(TS_FILES PT_pt.ts)
 set(QM_FILES PT_pt.qm)
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/translations DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 qt6_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 qt6_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${SOURCES} ${HEADERS} OPTIONS -locations none)
 

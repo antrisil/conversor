@@ -71,8 +71,10 @@ int main(int argc, char * argv[]) {
     QQuickView viewer;
     UserActivityDetector activityDetector;
     QTranslator *translator = new QTranslator();
-    translator->load("PT_pt.qm");
+    QQmlEngine *_engine;
+    translator->load("PT_pt", "/home/jonathan/Desktop/Jonathan/Frequency_Changer/conversor_frequencias/translations");
     app.installTranslator(translator);
+    _engine->retranslate();
 
     app.installEventFilter( & activityDetector);
 
