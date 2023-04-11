@@ -70,9 +70,9 @@ int main(int argc, char * argv[]) {
     QApplication app(argc, argv);
     QQuickView viewer;
     UserActivityDetector activityDetector;
-    QTranslator translator;
-    translator.load("PT_pt.qm");
-    app.installTranslator(&translator);
+    QTranslator *translator = new QTranslator();
+    translator->load("PT_pt.qm");
+    app.installTranslator(translator);
 
     app.installEventFilter( & activityDetector);
 

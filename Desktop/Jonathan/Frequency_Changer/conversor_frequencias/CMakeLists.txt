@@ -17,9 +17,11 @@ find_package(Qt6 6.2 COMPONENTS Quick SerialBus REQUIRED)
 find_package(Qt6 REQUIRED COMPONENTS Sql)
 find_library(SOCKETCAN_LIB socketcan)
 find_package(Qt6LinguistTools REQUIRED)
+set(LANGUAGES pt)
 set(TS_FILES PT_pt.ts)
 set(QM_FILES PT_pt.qm)
 qt6_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
+qt6_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${SOURCES} ${HEADERS} OPTIONS -locations none)
 
 qt_add_executable(appconversor_frequencias
     main.cpp
