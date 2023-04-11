@@ -1205,22 +1205,76 @@ appconversor_frequencias_autogen/timestamp: \
   /home/jonathan/Qt/6.4.2/gcc_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-relwithdebinfo.cmake \
   /home/jonathan/Qt/6.4.2/gcc_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake \
   /home/jonathan/Qt/6.4.2/gcc_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeCXXCompiler.cmake.in \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp \
   /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeCXXInformation.cmake \
   /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
   /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeCompilerIdDetection.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeDetermineCXXCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeDetermineCompileFeatures.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeDetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeDetermineCompilerABI.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeDetermineCompilerId.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeDetermineSystem.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeFindBinUtils.cmake \
   /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake \
   /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeGenericSystem.cmake \
   /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake \
   /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeNinjaFindMake.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeParseImplicitIncludeInfo.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeParseImplicitLinkInfo.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeParseLibraryArchitecture.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeSystem.cmake.in \
   /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake \
   /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeTestCXXCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CMakeTestCompilerCommon.cmake \
   /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CheckCXXCompilerFlag.cmake \
   /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CheckCXXSourceCompiles.cmake \
   /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CheckIncludeFileCXX.cmake \
   /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/CheckLibraryExists.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/ADSP-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/Borland-DetermineCompiler.cmake \
   /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/Cray-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/GHS-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
   /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/GNU-FindBinUtils.cmake \
   /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/GNU.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/IAR-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/Intel-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/MSVC-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/NVHPC-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/PGI-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/PathScale-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/SCO-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/TI-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/Watcom-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
   /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/FeatureSummary.cmake \
   /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/FindOpenGL.cmake \
   /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake \
@@ -1232,7 +1286,9 @@ appconversor_frequencias_autogen/timestamp: \
   /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Internal/CheckCompilerFlag.cmake \
   /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Internal/CheckFlagCommonConfig.cmake \
   /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Internal/FeatureTesting.cmake \
   /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/MacroAddFileDependencies.cmake \
+  /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Platform/Linux-Determine-CXX.cmake \
   /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Platform/Linux-GNU-CXX.cmake \
   /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake \
   /home/jonathan/Qt/Tools/CMake/share/cmake-3.24/Modules/Platform/Linux.cmake \
