@@ -1813,8 +1813,8 @@ return r2_2;
         wrapCall(aotContext, dataPtr, argumentsPtr, [](const QQmlPrivate::AOTCompiledContext *aotContext, void **argumentsPtr) {
 Q_UNUSED(aotContext)
 Q_UNUSED(argumentsPtr)
-bool r2_2;
 QString r2_3;
+bool r2_2;
 QObject *r2_1;
 // generate_LoadQmlContextPropertyLookup
 while (!aotContext->loadAttachedLookup(13, aotContext->qmlScopeObject, &r2_1)) {

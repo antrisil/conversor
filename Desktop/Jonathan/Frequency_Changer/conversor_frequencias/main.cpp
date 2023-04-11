@@ -65,10 +65,14 @@ int main(int argc, char * argv[]) {
     QtConcurrent::run(_db_);
     QtConcurrent::run(remaining);
 
-    // Qt Charts uses Qt Graphics View Framework for drawing, therefore QApplication must be used.
+
+
     QApplication app(argc, argv);
     QQuickView viewer;
     UserActivityDetector activityDetector;
+    QTranslator translator;
+    translator.load("PT_pt.qm");
+    app.installTranslator(&translator);
 
     app.installEventFilter( & activityDetector);
 

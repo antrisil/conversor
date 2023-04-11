@@ -5,6 +5,8 @@ project(conversor_frequencias VERSION 0.1 LANGUAGES CXX)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+
+
 add_custom_target(translations DEPENDS ${QM_FILES})
 
 include_directories(${Qt6X11Extras_INCLUDE_DIRS})
@@ -14,7 +16,10 @@ find_package(Qt6 REQUIRED COMPONENTS Charts Core Gui Qml Quick Sql)
 find_package(Qt6 6.2 COMPONENTS Quick SerialBus REQUIRED)
 find_package(Qt6 REQUIRED COMPONENTS Sql)
 find_library(SOCKETCAN_LIB socketcan)
-
+find_package(Qt6LinguistTools REQUIRED)
+set(TS_FILES PT_pt.ts)
+set(QM_FILES PT_pt.qm)
+qt6_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 
 qt_add_executable(appconversor_frequencias
     main.cpp

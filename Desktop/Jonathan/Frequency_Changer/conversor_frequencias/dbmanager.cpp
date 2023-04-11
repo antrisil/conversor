@@ -120,7 +120,7 @@ void DbManager::updateOutput() {
     }
 }
 
-void DbManager::updateLanguage() {
+void DbManager::updateLanguage(QString Language) {
     QSqlQuery query(m_db);
     query.prepare("update settings set language0 = \"" + language + "\" where def_serial_number = " + QString::number(serialNumber));
     if (query.exec()) {

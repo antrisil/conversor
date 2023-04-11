@@ -52,7 +52,7 @@ public slots:
     int getBypass() const;
     void updateStandby();
     void updateOutput();
-    void updateLanguage();
+    void updateLanguage(QString Language);
     void updateBypass();
     void setSeconds(int value);
     void setMinutes(int value);

@@ -264,6 +264,12 @@
                 },
                 {
                     "access": "public",
+                    "arguments": [
+                        {
+                            "name": "Language",
+                            "type": "QString"
+                        }
+                    ],
                     "name": "updateLanguage",
                     "returnType": "void"
                 },

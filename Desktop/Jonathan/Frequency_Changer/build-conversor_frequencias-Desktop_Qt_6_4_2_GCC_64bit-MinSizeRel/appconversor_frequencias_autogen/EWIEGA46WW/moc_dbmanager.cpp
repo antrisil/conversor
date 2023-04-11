@@ -31,7 +31,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_DbManager_t {
-    uint offsetsAndSizes[86];
+    uint offsetsAndSizes[88];
     char stringdata0[10];
     char stringdata1[16];
     char stringdata2[1];
@@ -51,30 +51,31 @@ struct qt_meta_stringdata_DbManager_t {
     char stringdata16[14];
     char stringdata17[13];
     char stringdata18[15];
-    char stringdata19[13];
-    char stringdata20[11];
-    char stringdata21[6];
-    char stringdata22[11];
-    char stringdata23[9];
-    char stringdata24[10];
+    char stringdata19[9];
+    char stringdata20[13];
+    char stringdata21[11];
+    char stringdata22[6];
+    char stringdata23[11];
+    char stringdata24[9];
     char stringdata25[10];
-    char stringdata26[12];
-    char stringdata27[14];
+    char stringdata26[10];
+    char stringdata27[12];
     char stringdata28[14];
-    char stringdata29[13];
-    char stringdata30[8];
-    char stringdata31[9];
-    char stringdata32[16];
-    char stringdata33[5];
-    char stringdata34[6];
-    char stringdata35[8];
-    char stringdata36[12];
-    char stringdata37[9];
-    char stringdata38[11];
+    char stringdata29[14];
+    char stringdata30[13];
+    char stringdata31[8];
+    char stringdata32[9];
+    char stringdata33[16];
+    char stringdata34[5];
+    char stringdata35[6];
+    char stringdata36[8];
+    char stringdata37[12];
+    char stringdata38[9];
     char stringdata39[11];
-    char stringdata40[7];
-    char stringdata41[9];
-    char stringdata42[7];
+    char stringdata40[11];
+    char stringdata41[7];
+    char stringdata42[9];
+    char stringdata43[7];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_DbManager_t::offsetsAndSizes) + ofs), len 
@@ -99,30 +100,31 @@ Q_CONSTINIT static const qt_meta_stringdata_DbManager_t qt_meta_stringdata_DbMan
         QT_MOC_LITERAL(212, 13),  // "updateStandby"
         QT_MOC_LITERAL(226, 12),  // "updateOutput"
         QT_MOC_LITERAL(239, 14),  // "updateLanguage"
-        QT_MOC_LITERAL(254, 12),  // "updateBypass"
-        QT_MOC_LITERAL(267, 10),  // "setSeconds"
-        QT_MOC_LITERAL(278, 5),  // "value"
-        QT_MOC_LITERAL(284, 10),  // "setMinutes"
-        QT_MOC_LITERAL(295, 8),  // "setHours"
-        QT_MOC_LITERAL(304, 9),  // "setOutput"
-        QT_MOC_LITERAL(314, 9),  // "setBypass"
-        QT_MOC_LITERAL(324, 11),  // "setLanguage"
-        QT_MOC_LITERAL(336, 13),  // "loadParameter"
-        QT_MOC_LITERAL(350, 13),  // "QList<double>"
-        QT_MOC_LITERAL(364, 12),  // "currentTable"
-        QT_MOC_LITERAL(377, 7),  // "getLoad"
-        QT_MOC_LITERAL(385, 8),  // "getLoad2"
-        QT_MOC_LITERAL(394, 15),  // "selectAllTables"
-        QT_MOC_LITERAL(410, 4),  // "load"
-        QT_MOC_LITERAL(415, 5),  // "load2"
-        QT_MOC_LITERAL(421, 7),  // "getlast"
-        QT_MOC_LITERAL(429, 11),  // "deleteFirst"
-        QT_MOC_LITERAL(441, 8),  // "getHours"
-        QT_MOC_LITERAL(450, 10),  // "getMinutes"
-        QT_MOC_LITERAL(461, 10),  // "getSeconds"
-        QT_MOC_LITERAL(472, 6),  // "output"
-        QT_MOC_LITERAL(479, 8),  // "language"
-        QT_MOC_LITERAL(488, 6)   // "bypass"
+        QT_MOC_LITERAL(254, 8),  // "Language"
+        QT_MOC_LITERAL(263, 12),  // "updateBypass"
+        QT_MOC_LITERAL(276, 10),  // "setSeconds"
+        QT_MOC_LITERAL(287, 5),  // "value"
+        QT_MOC_LITERAL(293, 10),  // "setMinutes"
+        QT_MOC_LITERAL(304, 8),  // "setHours"
+        QT_MOC_LITERAL(313, 9),  // "setOutput"
+        QT_MOC_LITERAL(323, 9),  // "setBypass"
+        QT_MOC_LITERAL(333, 11),  // "setLanguage"
+        QT_MOC_LITERAL(345, 13),  // "loadParameter"
+        QT_MOC_LITERAL(359, 13),  // "QList<double>"
+        QT_MOC_LITERAL(373, 12),  // "currentTable"
+        QT_MOC_LITERAL(386, 7),  // "getLoad"
+        QT_MOC_LITERAL(394, 8),  // "getLoad2"
+        QT_MOC_LITERAL(403, 15),  // "selectAllTables"
+        QT_MOC_LITERAL(419, 4),  // "load"
+        QT_MOC_LITERAL(424, 5),  // "load2"
+        QT_MOC_LITERAL(430, 7),  // "getlast"
+        QT_MOC_LITERAL(438, 11),  // "deleteFirst"
+        QT_MOC_LITERAL(450, 8),  // "getHours"
+        QT_MOC_LITERAL(459, 10),  // "getMinutes"
+        QT_MOC_LITERAL(470, 10),  // "getSeconds"
+        QT_MOC_LITERAL(481, 6),  // "output"
+        QT_MOC_LITERAL(488, 8),  // "language"
+        QT_MOC_LITERAL(497, 6)   // "bypass"
     },
     "DbManager",
     "LanguageChanged",
@@ -143,6 +145,7 @@ Q_CONSTINIT static const qt_meta_stringdata_DbManager_t qt_meta_stringdata_DbMan
     "updateStandby",
     "updateOutput",
     "updateLanguage",
+    "Language",
     "updateBypass",
     "setSeconds",
     "value",
@@ -178,7 +181,7 @@ Q_CONSTINIT static const uint qt_meta_data_DbManager[] = {
        0,       // classname
        0,    0, // classinfo
       28,   14, // methods
-      10,  224, // properties
+      10,  226, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
@@ -203,20 +206,20 @@ Q_CONSTINIT static const uint qt_meta_data_DbManager[] = {
       15,    0,  195,    2, 0x10a,   24 /* Public | MethodIsConst  */,
       16,    0,  196,    2, 0x0a,   25 /* Public */,
       17,    0,  197,    2, 0x0a,   26 /* Public */,
-      18,    0,  198,    2, 0x0a,   27 /* Public */,
-      19,    0,  199,    2, 0x0a,   28 /* Public */,
-      20,    1,  200,    2, 0x0a,   29 /* Public */,
-      22,    1,  203,    2, 0x0a,   31 /* Public */,
-      23,    1,  206,    2, 0x0a,   33 /* Public */,
-      24,    1,  209,    2, 0x0a,   35 /* Public */,
-      25,    1,  212,    2, 0x0a,   37 /* Public */,
-      26,    1,  215,    2, 0x0a,   39 /* Public */,
+      18,    1,  198,    2, 0x0a,   27 /* Public */,
+      20,    0,  201,    2, 0x0a,   29 /* Public */,
+      21,    1,  202,    2, 0x0a,   30 /* Public */,
+      23,    1,  205,    2, 0x0a,   32 /* Public */,
+      24,    1,  208,    2, 0x0a,   34 /* Public */,
+      25,    1,  211,    2, 0x0a,   36 /* Public */,
+      26,    1,  214,    2, 0x0a,   38 /* Public */,
+      27,    1,  217,    2, 0x0a,   40 /* Public */,
 
  // methods: name, argc, parameters, tag, flags, initial metatype offsets
-      27,    1,  218,    2, 0x02,   41 /* Public */,
-      30,    0,  221,    2, 0x102,   43 /* Public | MethodIsConst  */,
-      31,    0,  222,    2, 0x102,   44 /* Public | MethodIsConst  */,
-      32,    0,  223,    2, 0x02,   45 /* Public */,
+      28,    1,  220,    2, 0x02,   42 /* Public */,
+      31,    0,  223,    2, 0x102,   44 /* Public | MethodIsConst  */,
+      32,    0,  224,    2, 0x102,   45 /* Public | MethodIsConst  */,
+      33,    0,  225,    2, 0x02,   46 /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -237,32 +240,32 @@ Q_CONSTINIT static const uint qt_meta_data_DbManager[] = {
     QMetaType::Int,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,   19,
     QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,   21,
-    QMetaType::Void, QMetaType::Int,   21,
-    QMetaType::Void, QMetaType::Int,   21,
-    QMetaType::Void, QMetaType::Int,   21,
-    QMetaType::Void, QMetaType::Int,   21,
-    QMetaType::Void, QMetaType::QString,   21,
+    QMetaType::Void, QMetaType::Int,   22,
+    QMetaType::Void, QMetaType::Int,   22,
+    QMetaType::Void, QMetaType::Int,   22,
+    QMetaType::Void, QMetaType::Int,   22,
+    QMetaType::Void, QMetaType::Int,   22,
+    QMetaType::Void, QMetaType::QString,   22,
 
  // methods: parameters
-    0x80000000 | 28, QMetaType::QString,   29,
-    0x80000000 | 28,
-    0x80000000 | 28,
+    0x80000000 | 29, QMetaType::QString,   30,
+    0x80000000 | 29,
+    0x80000000 | 29,
     QMetaType::QStringList,
 
  // properties: name, type, flags
-      33, 0x80000000 | 28, 0x00015009, uint(1), 0,
-      34, 0x80000000 | 28, 0x00015009, uint(2), 0,
-      35, QMetaType::QString, 0x00015001, uint(4), 0,
-      36, QMetaType::QString, 0x00015001, uint(-1), 0,
-      37, QMetaType::Int, 0x00015003, uint(5), 0,
-      38, QMetaType::Int, 0x00015003, uint(6), 0,
-      39, QMetaType::Int, 0x00015003, uint(7), 0,
-      40, QMetaType::Int, 0x00015103, uint(9), 0,
-      41, QMetaType::QString, 0x00015103, uint(0), 0,
-      42, QMetaType::Int, 0x00015103, uint(11), 0,
+      34, 0x80000000 | 29, 0x00015009, uint(1), 0,
+      35, 0x80000000 | 29, 0x00015009, uint(2), 0,
+      36, QMetaType::QString, 0x00015001, uint(4), 0,
+      37, QMetaType::QString, 0x00015001, uint(-1), 0,
+      38, QMetaType::Int, 0x00015003, uint(5), 0,
+      39, QMetaType::Int, 0x00015003, uint(6), 0,
+      40, QMetaType::Int, 0x00015003, uint(7), 0,
+      41, QMetaType::Int, 0x00015103, uint(9), 0,
+      42, QMetaType::QString, 0x00015103, uint(0), 0,
+      43, QMetaType::Int, 0x00015103, uint(11), 0,
 
        0        // eod
 };
@@ -330,6 +333,7 @@ Q_CONSTINIT const QMetaObject DbManager::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'updateLanguage'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         // method 'updateBypass'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'setSeconds'
@@ -387,7 +391,7 @@ void DbManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
         case 14: _t->updateStandby(); break;
         case 15: _t->updateOutput(); break;
-        case 16: _t->updateLanguage(); break;
+        case 16: _t->updateLanguage((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 17: _t->updateBypass(); break;
         case 18: _t->setSeconds((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         case 19: _t->setMinutes((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;

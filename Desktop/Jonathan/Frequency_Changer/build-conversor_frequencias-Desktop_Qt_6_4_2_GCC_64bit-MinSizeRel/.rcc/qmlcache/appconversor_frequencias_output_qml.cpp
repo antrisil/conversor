@@ -1987,9 +1987,9 @@ return r2_2;
         wrapCall(aotContext, dataPtr, argumentsPtr, [](const QQmlPrivate::AOTCompiledContext *aotContext, void **argumentsPtr) {
 Q_UNUSED(aotContext)
 Q_UNUSED(argumentsPtr)
+QObject *r2_1;
 QString r2_3;
 bool r2_2;
-QObject *r2_1;
 // generate_LoadQmlContextPropertyLookup
 while (!aotContext->loadAttachedLookup(45, aotContext->qmlScopeObject, &r2_1)) {
 aotContext->setInstructionPointer(2);
