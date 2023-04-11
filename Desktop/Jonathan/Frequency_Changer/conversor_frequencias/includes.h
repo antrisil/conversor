@@ -39,4 +39,6 @@
 #include <QTimer>
 #include <X11/Xlib.h>
 #include <QEvent>
+#include <QTranslator>
+#include <QDir>
 #endif // INCLUDES_H

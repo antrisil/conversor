@@ -17,7 +17,7 @@ Item {
         Text {
             id: humidadetext
             color: "#000000"
-            text: "METRICS"
+            text: qsTr("METRICS")
             font.bold: true
             styleColor: "#000000"
             font.pointSize: 20
@@ -36,7 +36,7 @@ Item {
                 name: "Temperature"
             }
             ListElement {
-                name: "Humidade"
+                name: "Humidity"
             }
             ListElement {
                 name: "Exit"
@@ -51,7 +51,7 @@ Item {
             border.color: "black"
 
             Text {
-                text: name === "Temperature" ? "Temperature : " + (pcan.getTemp / 10).toString() + "°" : name === "Humidade" ? "Humidade : " + (pcan.getHumidity / 10).toString() + "%" : name
+                text: name === "Temperature" ? qsTr("Temperature : ") + (pcan.getTemp / 10).toString() + "°" : name === "Humidity" ? qsTr("Humidity : ") + (pcan.getHumidity / 10).toString() + "%" : name === "Exit" ? qsTr("Exit") : name
                 anchors.centerIn: parent
             }
 

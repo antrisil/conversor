@@ -20,7 +20,7 @@ Item {
         Text {
             id: outputtext
             color: "#000000"
-            text: "OUTPUT"
+            text: qsTr("OUTPUT")
             font.bold: true
             styleColor: "#000000"
             font.pointSize: 20
@@ -59,7 +59,6 @@ Item {
     }
 
     ListView {
-
         id: myListView
         width: parent.width
         height: parent.height - 50
@@ -79,7 +78,7 @@ Item {
             color: ListView.isCurrentItem ? "lightblue" : "white"
             border.color: "black"
             Text {
-                text: name === "Output" ? "Output : " + myNumber.toString() : name
+                text: name === "Output" ? "Output : " + myNumber.toString() : name === "Exit" ? qsTr("Exit") : name
                 anchors.centerIn: parent
             }
 

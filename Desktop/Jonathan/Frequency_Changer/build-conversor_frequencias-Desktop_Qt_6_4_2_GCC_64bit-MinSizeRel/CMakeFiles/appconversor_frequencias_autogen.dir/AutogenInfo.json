@@ -893,6 +893,12 @@
 			null
 		],
 		[
+			"/home/jonathan/Desktop/Jonathan/Frequency_Changer/conversor_frequencias/mytranslator.h",
+			"Mu",
+			"EWIEGA46WW/moc_mytranslator.cpp",
+			null
+		],
+		[
 			"/home/jonathan/Desktop/Jonathan/Frequency_Changer/conversor_frequencias/pcan.h",
 			"Mu",
 			"EWIEGA46WW/moc_pcan.cpp",
@@ -1031,6 +1037,11 @@
 		],
 		[
 			"/home/jonathan/Desktop/Jonathan/Frequency_Changer/conversor_frequencias/main.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/jonathan/Desktop/Jonathan/Frequency_Changer/conversor_frequencias/mytranslator.cpp",
 			"Mu",
 			null
 		],

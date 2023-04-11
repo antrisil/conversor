@@ -23,7 +23,7 @@ Item {
         Text {
             id: settingtext
             color: "#000000"
-            text: "MENU"
+            text: qsTr("MENU")
             font.bold: true
             styleColor: "#000000"
             font.pointSize: 20
@@ -66,7 +66,7 @@ Item {
             color: ListView.isCurrentItem ? "#add8e6" : "white"
             border.color: "black"
             Text {
-                text: name
+                text: name === "Home" ? qsTr("Home") : name === "Language" ? qsTr("Languages") : name === "Output" ? qsTr("Output") : name === "Metrics" ? qsTr("Metrics") : name === "Bypass" ? qsTr("Bypass") : name === "Stand By" ? qsTr("StandBy") : name === "Maintenance" ? qsTr("Maintenance") : name
                 anchors.centerIn: parent
             }
             MouseArea {

@@ -95,7 +95,7 @@ Item {
                 border.color: "black"
                 Text {
                     id: test
-                    text: name === "Timer" ? "" : name
+                    text: name === "Timer" ? "" : name === "Exit" ? qsTr("Exit") : name
                     anchors.centerIn: parent
                 }
                 MouseArea {
@@ -274,7 +274,7 @@ Item {
             height: myListView.height / 7
             y: 50
             Text {
-                text: "Timer : "
+                text: qsTr("Timer : ")
                 anchors.verticalCenter: parent.verticalCenter
             }
 

@@ -42,6 +42,7 @@ void dbmanager() {
     db -> dropOlderTable();
     db -> keep100rows();
     db -> selectSerialNumber();
+    db -> selectBypass();
     db -> selectStandby();
     db -> selectOutput();
     idleTimer.setSeconds(db -> getSeconds());

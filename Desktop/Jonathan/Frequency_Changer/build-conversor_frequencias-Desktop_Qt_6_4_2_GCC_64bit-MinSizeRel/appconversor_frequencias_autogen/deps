@@ -8,6 +8,8 @@ appconversor_frequencias_autogen/timestamp: \
 	/home/jonathan/Desktop/Jonathan/Frequency_Changer/conversor_frequencias/dbmanager.h \
 	/home/jonathan/Desktop/Jonathan/Frequency_Changer/conversor_frequencias/includes.h \
 	/home/jonathan/Desktop/Jonathan/Frequency_Changer/conversor_frequencias/main.cpp \
+	/home/jonathan/Desktop/Jonathan/Frequency_Changer/conversor_frequencias/mytranslator.cpp \
+	/home/jonathan/Desktop/Jonathan/Frequency_Changer/conversor_frequencias/mytranslator.h \
 	/home/jonathan/Desktop/Jonathan/Frequency_Changer/conversor_frequencias/pcan.cpp \
 	/home/jonathan/Desktop/Jonathan/Frequency_Changer/conversor_frequencias/pcan.h \
 	/home/jonathan/Desktop/Jonathan/Frequency_Changer/conversor_frequencias/timer.cpp \
@@ -64,6 +66,7 @@ appconversor_frequencias_autogen/timestamp: \
 	/home/jonathan/Qt/6.4.2/gcc_64/include/QtCore/QThread \
 	/home/jonathan/Qt/6.4.2/gcc_64/include/QtCore/QTime \
 	/home/jonathan/Qt/6.4.2/gcc_64/include/QtCore/QTimer \
+	/home/jonathan/Qt/6.4.2/gcc_64/include/QtCore/QTranslator \
 	/home/jonathan/Qt/6.4.2/gcc_64/include/QtCore/QUrl \
 	/home/jonathan/Qt/6.4.2/gcc_64/include/QtCore/QVariant \
 	/home/jonathan/Qt/6.4.2/gcc_64/include/QtCore/QVector \

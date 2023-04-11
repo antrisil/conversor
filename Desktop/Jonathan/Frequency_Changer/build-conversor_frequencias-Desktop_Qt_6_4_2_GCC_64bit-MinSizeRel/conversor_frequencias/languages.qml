@@ -17,7 +17,7 @@ Item {
         Text {
             id: idiomaText
             color: "#000000"
-            text: "LANGUAGE"
+            text: qsTr("LANGUAGE")
             font.bold: true
             styleColor: "#000000"
             font.pointSize: 20
@@ -48,7 +48,7 @@ Item {
             color: ListView.isCurrentItem ? "lightblue" : "white"
             border.color: "black"
             Text {
-                text: name
+                text: name === "English" ? qsTr("English") : name === "Portugues" ? qsTr("Portuguese")  : name === "Exit" ? qsTr("Exit") : name
                 anchors.centerIn: parent
             }
             MouseArea {

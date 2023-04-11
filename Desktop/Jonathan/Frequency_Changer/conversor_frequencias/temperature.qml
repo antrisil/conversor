@@ -14,7 +14,7 @@ Item {
         Text {
             id: temperaturetext
             color: "#000000"
-            text: "TEMPERATURE"
+            text: qsTr("TEMPERATURE")
             font.bold: true
             styleColor: "#000000"
             font.pointSize: 20
@@ -32,7 +32,7 @@ Item {
 
         Text {
             id: temperatureText
-            text: "Temperature :"
+            text: qsTr("Temperature :")
             font.pointSize: 20
             anchors.verticalCenter: parent.verticalCenter
             x: 80
@@ -57,7 +57,7 @@ Item {
 
         Text {
             id: exitText
-            text: "Exit"
+            text: qsTr("Exit")
             font.pointSize: 20
             anchors.centerIn: parent
         }

@@ -28,7 +28,7 @@ Item {
 
         Text {
             id: voltInValueL1
-            text: qsTr("L1: " + (pcan.getAB / 10.0))
+            text: "L1: " + (pcan.getAB / 10.0)
             font.pointSize: 20
             anchors.horizontalCenter: parent.horizontalCenter
             y: (parent.height / 2) - 50
@@ -36,7 +36,7 @@ Item {
 
         Text {
             id: voltInValueL2
-            text: qsTr("L2: " + pcan.getBC / 10.0)
+            text: "L2: " + pcan.getBC / 10.0
             font.pointSize: 20
             anchors.horizontalCenter: parent.horizontalCenter
             y: (parent.height / 2) - 10
@@ -44,7 +44,7 @@ Item {
 
         Text {
             id: voltInValueL3
-            text: qsTr("L3: " + pcan.getCA / 10.0)
+            text: "L3: " + pcan.getCA / 10.0
             font.pointSize: 20
             anchors.horizontalCenter: parent.horizontalCenter
             y: (parent.height / 2) + 30
@@ -62,7 +62,7 @@ Item {
 
         Text {
             id: voltOut
-            text: qsTr("VoltOut")
+            text: "VoltOut"
             font.pointSize: 12
             anchors.horizontalCenter: parent.horizontalCenter
             y: (parent.height / 2) - 70
@@ -70,7 +70,7 @@ Item {
 
         Text {
             id: voltOutValueL1
-            text: qsTr("L1: " + (pcan.getInvPhaseAVolt / 10.0))
+            text: "L1: " + (pcan.getInvPhaseAVolt / 10.0)
             font.pointSize: 20
             anchors.horizontalCenter: parent.horizontalCenter
             y: (parent.height / 2) - 50
@@ -78,7 +78,7 @@ Item {
 
         Text {
             id: voltOutValueL2
-            text: qsTr("L2: " + (pcan.getInvPhaseBVolt / 10.0))
+            text: "L2: " + (pcan.getInvPhaseBVolt / 10.0)
             font.pointSize: 20
             anchors.horizontalCenter: parent.horizontalCenter
             y: (parent.height / 2) - 10
@@ -86,7 +86,7 @@ Item {
 
         Text {
             id: voltOutValueL3
-            text: qsTr("L3: " + (pcan.getInvPhaseCVolt / 10.0))
+            text: "L3: " + (pcan.getInvPhaseCVolt / 10.0)
             font.pointSize: 20
             anchors.horizontalCenter: parent.horizontalCenter
             y: (parent.height / 2) + 30
@@ -124,7 +124,7 @@ Item {
         Text {
             id: startStop
             color: "#04ff00"
-            text: "START"
+            text: qsTr("START")
             font.pointSize: 30
             anchors.centerIn: parent
         }
@@ -142,7 +142,7 @@ Item {
 
         Text {
             id: load
-            text: "LOAD"
+            text: qsTr("LOAD")
             font.pointSize: 12
             anchors.horizontalCenter: parent.horizontalCenter
             y: parent.height / 2 - 50
@@ -150,7 +150,7 @@ Item {
 
         Text {
             id: loadValue
-            text: qsTr(pcan.getLoad + "%")
+            text: pcan.getLoad + "%"
             font.pointSize: 30
             anchors.horizontalCenter: parent.horizontalCenter
             y: parent.height / 2 - 20

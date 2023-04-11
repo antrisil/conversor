@@ -20,7 +20,7 @@ Item {
 
     Text {
       id: load
-      text: "BOOTING"
+      text: qsTr("BOOTING")
       font.pointSize: 20
       anchors.centerIn: parent
     }

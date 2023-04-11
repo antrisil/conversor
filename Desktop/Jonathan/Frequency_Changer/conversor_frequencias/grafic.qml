@@ -39,7 +39,7 @@ Item {
 
         LineSeries {
             id: lineSeries
-            name: "Load"
+            name: qsTr("Load")
             visible: false
             axisX: CategoryAxis {
                 id: axisLabels
@@ -403,7 +403,7 @@ Item {
             id: buttonExit0
             width: 70
             height: 25
-            text: "Exit"
+            text: qsTr("Exit")
             background: Rectangle {
                 id: buttonExit0color
                 color: "#f0f8ff"

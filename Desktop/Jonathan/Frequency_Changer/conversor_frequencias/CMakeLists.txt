@@ -5,6 +5,8 @@ project(conversor_frequencias VERSION 0.1 LANGUAGES CXX)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+add_custom_target(translations DEPENDS ${QM_FILES})
+
 include_directories(${Qt6X11Extras_INCLUDE_DIRS})
 
 find_package(Qt6 REQUIRED COMPONENTS Concurrent)
@@ -25,6 +27,8 @@ qt_add_executable(appconversor_frequencias
     timer.h
     useractivitydetector.h
     useractivitydetector.cpp
+    mytranslator.h
+    mytranslator.cpp
 )
 
 qt_add_qml_module(appconversor_frequencias
